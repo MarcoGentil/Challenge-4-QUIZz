@@ -1,6 +1,7 @@
 var questionIndex = 0;
 var score = 0;
 var currentTime = document.querySelector("#currentTime");
+console.log(document.getElementById("currentTime"))
 var timer = document.querySelector("#startQuiz");
 var questions = document.querySelector("questions");
 var wrapper = document.querySelector("#wrapper");
@@ -8,6 +9,8 @@ var secondsLeft = 80;
 var holdInterval = 0;
 var penalty = 10;
 var ulCreate = document.createElement("ul");
+
+
 var questions = 
     [
         {
