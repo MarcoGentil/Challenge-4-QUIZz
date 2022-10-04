@@ -119,47 +119,5 @@ var questions =
 
             questionsDiv.appendChild(createP2);
         }
-    
-    var createLabel = document.createElement("label");
-    createLabel.setAttribute("id", "createLabel");
-    createLabel.textContent = "Enter your Initials: ";
-
-    questionsDiv.appendChild(createLabel);
-
-    var createInput = document.createElement("input");
-    createInput.setAttribute("type", "text");
-    createInput.setAttribute("id", "initials");
-    createInput.textContent = "";
-
-    questionsDiv.appendChild(createInput);
-
-    var createSubmit = document.createElement("button");
-    createSubmit.setAttribute("type", "Submit");
-    createSubmit.setAttribute("id", "Submit");
-    createSubmit.textContent = "Submit";
-
-    questionsDiv.appendChild(createSubmit);
-
-    createSubmit.addEventListener("click", function () {
-        var initials = createInput.value;
-
-        if (initials === null) {
-        } else {
-            var finalScore = {
-                initials: initials,
-                score: timeRemaining
-            }
-
-            var allScores = localStorage.getItem("allScores");
-            if (allScores === null) {
-                allScores = [];
-            } else {
-                allScores = JSON.parse(allScores);
-            }
-            allScores.push(finalScore);
-            var newScore = JSON.stringify(allScores);
-            localStorage.setItem("allScores", newScore);
-            window.location.replace("./highscores.html");
-        }
-    });
+         //scoreboard comming soon =(
 }
